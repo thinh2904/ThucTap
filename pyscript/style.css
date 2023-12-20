@@ -1,0 +1,105 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Poppins',sans-serif;
+    cursor: pointer;
+    background-image:url("bg.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.container {
+    width: 380px;
+    height: 90%;
+    background-color:rgba(220, 247, 220, 0.93);
+    border-radius: 30px;
+    overflow: hidden;
+    box-shadow: 0px 0px 0px 8px rgba(255, 255, 255, 0.3);
+}
+
+
+.header {
+    text-align: center;
+    font-size: 30px;
+    font-weight: 500;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    color: #013102;
+}
+
+.body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.body input {
+    border: 0px solid #e4f3de;
+    width: 200px;
+    height: 42px;
+    padding: 10px;
+    border-radius: 10px 0px 0px 10px;
+}
+
+.name-city {
+    width: 100%;
+    font-size: 25px;
+    text-align: center;
+    margin-bottom: 10px;
+    color: #013102;
+}
+
+.body button {
+    border: 0px;
+    font-size: 15px;
+    height: 42px;
+    width: 70px;
+    background-color: #49b54d;
+    color: white;
+    border: none;
+    border-radius: 0px 10px 10px 0px;
+    font-family: Arial, sans-serif;
+    cursor: pointer;
+}
+
+.info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.info #text-temp {
+    font-size: 65px;
+    color: #013102;
+}
+
+#bug {
+    text-align: center;
+    color: red;
+}
+
+#text-icon {
+    display: flex;
+    text-align: center;
+    align-items: center;
+    width: 100%;
+}
+
+
+.icon {
+    display: none;
+    width: 60%;
+    height: auto;
+    margin-left: auto;
+    margin-right: auto;
+}

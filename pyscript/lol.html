@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+
+  <title>Writing to the page</title>
+
+  <link rel="stylesheet" href="https://pyscript.net/latest/pyscript.css" />
+  <script defer src="https://pyscript.net/latest/pyscript.js"></script>
+  </head>
+
+  <body>
+    <py-config>
+      packages = ["requests", "pandas"]
+    </py-config>
+
+
+    <div id = "div_anh">
+      <img src="http://ddragon.leagueoflegends.com/cdn/img/champion/loading/Aatrox_0.jpg" alt="không có skin" id="anh">
+    </div>
+    <input type="text" id="text_in">
+    <input type="number" id="skin" min="0" max="10">
+
+    <button py-click="write_to_page()" id="manual">Say Hello</button>
+    <div id="manual-write"></div>
+    <py-script>
+    def write_to_page():
+      manual_div = Element("manual-write")
+      manual_div.element.innerText = "Say Hello To " + " " + Element("text_in").value
+      link = f"""http://ddragon.leagueoflegends.com/cdn/img/champion/loading/{Element("text_in").value}_{Element("skin").value}.jpg"""
+      Element("div_anh").element.innerHTML = f"""<img src="{link}" alt="không có skin" id="anh">"""
+    </py-script>
+  </body>
+</html>
